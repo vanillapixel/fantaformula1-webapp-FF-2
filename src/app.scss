@@ -1,0 +1,17 @@
+@font-face {
+	font-family: myFirstFont;
+	src: url(./assets/font/Titillium_Web/TitilliumWeb-Light.ttf);
+}
+
+* {
+	position: relative;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: myFirstFont;
+}
+
+:root {
+	--main-color-1: #BE3535;
+	--main-color-2: #fb4935;
+}

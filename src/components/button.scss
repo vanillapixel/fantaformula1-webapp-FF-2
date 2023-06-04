@@ -1,0 +1,29 @@
+.button {
+  width: 100%;
+  padding: 1rem 2rem;
+  color: var(--button-color);
+  background-color: var(--button-background);
+  border-radius: 8px;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: .3s;
+
+  &:hover {
+    background-color: var(--button-background_hover);
+    color: var(--button-color_hover);
+  }
+
+  &:disabled {
+    filter: saturate(0);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+.cta-button {
+  --button-color: white;
+  --button-color_hover: white;
+  --button-background: var(--main-color-1);
+  --button-background_hover: var(--main-color-2);
+}

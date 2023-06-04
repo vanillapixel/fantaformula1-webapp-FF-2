@@ -1,0 +1,14 @@
+.navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  width: 55px;
+
+  img {
+    width: 100%;
+  }
+}

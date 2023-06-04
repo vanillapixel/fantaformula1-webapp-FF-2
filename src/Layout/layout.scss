@@ -1,0 +1,18 @@
+.page-container {
+  --page-width: 100%;
+  width: 100%;
+  max-width: var(--page-width);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: auto;
+  padding: 1rem;
+  gap: 2.5rem 1rem;
+
+  >* {
+    grid-column-end: span 12;
+  }
+
+  @media only screen and (min-width: 600px) {
+    --page-width: 1200px;
+  }
+}
