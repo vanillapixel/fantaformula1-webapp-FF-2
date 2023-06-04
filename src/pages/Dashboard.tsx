@@ -3,33 +3,27 @@ import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import Layout from "../Layout/Layout";
 import Card from "../components/Card";
+import { standings } from "../dummyData/standings";
+import { playerDashboardData } from "../dummyData/playerDashboardData";
 
 import "./dashboard.scss";
 
-const HARDCODED_VALUES = {
-	playerName: "Lorenzo Ferretti",
-	teamName: "Scuderia Spicy",
-	position: 7,
-	points: 114,
-	nextRace: {
-		name: "GRAN PREMIO DE ESPAÑA 2023",
-		raceStart: "2023-05-20T00:00:00Z",
-		qualiStart: "2023-05-19T00:00:00Z",
-		fp1Start: "2023-05-18T00:00:00Z",
-	},
-};
 const Dashboard = () => {
 	const {
-		position,
-		points,
 		teamName,
 		playerName,
 		nextRace: { raceStart, name, fp1Start },
-	} = HARDCODED_VALUES;
+	} = playerDashboardData;
 
 	const scoreCardItems = [
-		{ label: "position", value: position.toString() },
-		{ label: "points", value: points.toString() },
+		{
+			label: "position",
+			value: `${standings.find((player) => player.name === playerName)?.pos}`,
+		},
+		{
+			label: "points",
+			value: `${standings.find((player) => player.name === playerName)?.score}`,
+		},
 	];
 	return (
 		<Layout>
